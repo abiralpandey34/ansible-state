@@ -1,0 +1,13 @@
+---
+
+- name: Collect Facts about the machine
+  hosts: linux
+  gather_facts: true
+#   connection: network_cli
+
+  tasks:
+    - name: Display the facts
+      debug:
+        msg: "{{ ansible_facts['env'] }}"
+      # msg: "{{ ansible_facts['architecture'] }}"   
+

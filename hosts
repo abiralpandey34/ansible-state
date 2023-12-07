@@ -1,0 +1,15 @@
+[linux]
+
+192.168.31.50
+192.168.31.55
+
+[linux:vars]
+
+ansible_user=root
+ansible_password=root
+
+
+
+#[linux]
+#192.168.31.50 ansible_user=root ansible_password=root
+#192.168.31.55 ansible_user=root ansible_password=root

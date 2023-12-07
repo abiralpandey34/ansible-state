@@ -1,0 +1,18 @@
+- name: synchronize Justin's Fedora Server environment
+  hosts: linux
+  become: yes
+
+  vars:
+    target_user_name: "Justin W. Flory (he/him)"
+
+  tasks:
+    - name: install tldr package
+      ansible.builtin.package:
+        state: present
+        name:
+          - tldr
+
+    - name: Update tldr package
+      ansible.builtin.command:
+        cmd: tldr -u
+
